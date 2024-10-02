@@ -1,0 +1,134 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-image: url(../img/Screenshot\ 2024-09-18\ 144325.png);
+    background-size: 50%; /* Cover the entire viewport */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent background repetition */
+    height: 100vh;
+   
+    overflow: hidden; /* Hide scrollbars */
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    position: relative; /* For overlay positioning */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(173, 173, 173, 0.5); /* Gray with transparency */
+}
+
+.welcome-container {
+    position: relative; /* To position within the overlay */
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    backdrop-filter: blur(7px); /* Optional blur effect */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+    max-width: 400px;
+    animation: scale-in 0.5s ease-in-out;
+    z-index: 1; /* Ensure this is above the overlay */
+}
+
+.logo img {
+    max-width: 80%; /* Responsive logo */
+    height: auto;
+    animation: fade-in 1s forwards;
+}
+
+h1 {
+    color: #1976d2; /* Brand color */
+    margin: 20px 0;
+    opacity: 0; /* Start invisible */
+    animation: fade-in 1s forwards 0.5s; /* Delay for effect */
+}
+
+p {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: bolder;
+    opacity: 0; /* Start invisible */
+    animation: slide-in 1s forwards 1s; /* Delay for effect */
+}
+
+.explore-button {
+    display: inline-block;
+    margin-top: 20px;
+
+    text-decoration: none;
+ 
+
+    background: #007bff; /* Primary blue color */
+    color: #ffffff; /* White text color */
+    border: none; /* Remove default border */
+    padding: 10px 20px; /* Slightly increased padding for a more prominent button */
+    border-radius: 12px; /* More rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 15px; /* Increased font size for better readability */
+    font-weight: 600; /* Slightly bolder text */
+    text-align: center; /* Center text alignment */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for elevation */
+}
+.explore-button:hover {
+    background: #0056b3; 
+    transform: translateY(4px); 
+}
+
+.explore-button:active {
+    background: #004080;
+    transform: translateY(1px); /
+}
+
+/* Animations */
+@keyframes scale-in {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    body {
+        background-size: 40%; /* Change to contain for smaller screens */
+    }
+}
+
+@media (min-width: 769px) {
+    body {
+        background-size: 50%; /* Keep cover for larger screens */
+    }
+}

@@ -1,0 +1,288 @@
+#map { height: 88vh !important; }
+/* formm leaflet */
+/* Align the entire layer control to the right */
+.leaflet-control-layers {
+    background: #ffffff; /* White background */
+    border: 1px solid #cccccc; /* Light gray border */
+    border-radius: 4px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    padding: 10px; /* Padding inside the control */
+    direction: rtl; /* Set direction to RTL */
+    color: #be0e0e;
+  }
+  
+  .leaflet-control-layers-list {
+    margin-top: 5px; /* Space between the toggle and the list */
+  }
+  
+  /* Style each layer item */
+  .leaflet-control-layers label {
+    display: block; /* Each layer item on a new line */
+    font-size: 14px; /* Font size */
+    color: #000000; /* Dark gray text color */
+    margin-bottom: 5px; 
+    cursor: pointer; 
+    text-align: right; 
+    font-weight: bold;
+  }
+  
+  /* Style the checkboxes and radio buttons */
+  .leaflet-control-layers input[type="radio"],
+  .leaflet-control-layers input[type="checkbox"] {
+    margin-left: 0; /* Remove default left margin */
+    margin-right: 5px; 
+  }
+  
+  /* Style the checked layer item */
+  .leaflet-control-layers input[type="radio"]:checked + span,
+  .leaflet-control-layers input[type="checkbox"]:checked + span {
+    font-weight: bold; 
+    color: #920000; 
+  }
+  
+
+  .leaflet-control-layers .leaflet-control-layers-overlays label {
+    color: #666666; 
+  }
+  
+#h2{
+    text-align: center;
+    color: #960606;
+}
+        /* #infoBox {
+            position: absolute;
+            top: 300px;
+            right: 10px;
+            background:#ebe7e7;
+            padding: 10px;
+            border: 1px solid #960606;
+            z-index: 1000;
+            display: none; 
+            max-width: 300px;
+             
+        } */
+
+        /* General styling for the infoBox */
+#infoBox {
+    display: none;
+    position: fixed; 
+    top: 375px;
+    right: 10px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000; 
+    max-width: 300px; 
+    font-family: Arial, sans-serif;
+    animation: fadeIn 0.3s ease-in-out; 
+}
+
+/* Header styling */
+#infoBox h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: #333;
+    text-align: center; /* Center the header text */
+}
+
+/* Content styling */
+#infoContent {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+
+/* Paragraph styling for the tooltip content */
+#infoContent p {
+    /* display: flex; */
+    justify-content: space-between;
+    margin: 8px 0;
+    font-size: 19px;
+    color: #333;
+    line-height: 1.5;
+    direction: rtl;
+}
+
+/* Styling for the labels */
+#infoContent strong {
+    color: #007BFF; /* Blue color for labels */
+    font-size: 15px;
+    padding: 5px;
+    text-align: right;
+}
+
+/* Styling for the values */
+#infoContent span {
+    color: #555; /* Dark grey for values */
+    margin-left: 10px; 
+    font-size: 15px;/* Adds spacing between label and value */
+}
+
+/* Tooltip arrow */
+#infoBox::after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    right: 100%; /* Position the arrow to the left of the box */
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent #ffffff transparent transparent; /* Arrow pointing right */
+    border-radius: 3px;
+}
+
+/* Animation for fade-in effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+.img{
+    width: 85% !important;
+}
+strong{
+    color: #00306e;
+}
+.custom-icon {
+    background: transparent; 
+    border: none;
+    width: 32px;
+    height: 32px;
+}
+
+.icon-image {
+    width: 10%; 
+    height: auto; 
+}
+
+#map-container {
+  /* Positioning context for #box */
+    width: 100%; /* Full width of the parent element */
+    height: 100vh; /* Full viewport height, or adjust as needed */
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+}
+
+#box {
+    position: absolute; 
+    top: 800px; 
+    left: 20px; 
+    background-color: white; 
+    padding: 10px; 
+    border-radius: 5px; 
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+    z-index: 1000; 
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px; 
+}
+
+.img1 {
+    width: 32px;
+    height: 32px;
+}
+
+p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.con{
+    height:50%;
+    border: black;
+    background-color: #be0e0e ;
+}
+
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 10px; 
+    height: 47px;
+    background-color: #f8f8f8; 
+}
+.logo-right{
+    height: 90px; 
+}
+.logo-left {
+    height: 50px; 
+}
+.project-name {
+    text-align: center;
+    flex-grow: 1; 
+    margin: 0 20px; 
+    font-size: 24px;
+    font-weight: bold;
+    color: #1976f0;
+}
+
+.locate-btn {
+    background: #007bff; /* Primary blue color */
+    color: #ffffff; /* White text color */
+    border: none; /* Remove default border */
+    padding: 10px 20px; /* Slightly increased padding for a more prominent button */
+    border-radius: 12px; /* More rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 15px; /* Increased font size for better readability */
+    font-weight: 600; /* Slightly bolder text */
+    text-align: center; /* Center text alignment */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for elevation */
+}
+
+.locate-btn:hover {
+    background: #0056b3; /* Darker blue for hover effect */
+    transform: translateY(-2px); /* Slight upward movement on hover */
+}
+
+.locate-btn:active {
+    background: #004080; /* Even darker blue for active state */
+    transform: translateY(1px); /* Slight downward movement on click */
+}
+
+
+/* Tooltip styling */
+.tooltip-content {
+    display: flex;
+    text-align: right;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.tooltip-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 4px 0;
+    text-align: right;
+}
+
+.tooltip-row strong {
+    color: #007bff; /* Blue color for labels */
+    font-weight: bold;
+    text-align: right;
+}
+
+.tooltip-row span {
+    color: #333; /* Dark color for values */
+    text-align: right; /* Ensure values are aligned to the right */
+}

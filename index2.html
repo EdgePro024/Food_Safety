@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منظمة الغذاء</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-draw/dist/leaflet.draw.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-geoman@2.14.0/dist/leaflet-geoman.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-control-measure/dist/leaflet-control-measure.css" />
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/styyyle.css">
+   
+</head>
+<body>
+    <div class="header">
+        <img src="./img/Logo_Edge-Pro_Ver3_light_blue.png.webp" alt="Left Logo" class="logo-left">
+        <div class="project-name">مقرات الهيئة القومية لسلامة الغذاء</div>
+        <img src="./img/Capture-removebg-preview.png" alt="Right Logo" class="logo-right">
+    </div>
+
+    
+    <div id="map"></div>
+    <div id="infoBox">
+        <h2 id="h2">بيانات المقر</h2>
+        <hr>
+        <div id="infoContent">
+            <p> <strong>المحافظة:</strong><span id="governorat">N/A</span></p>
+            <p><strong>المنطقة:</strong> <span id="district">N/A</span></p>
+            <p><strong>العنوان:</strong> <span id="address">N/A</span></p>
+            <p><strong>النوع:</strong> <span id="location">N/A</span></p>
+            <p><strong>المسافة بين المقر الرئيسي:</strong> <span id="distance">N/A</span></p>
+        </div>
+    </div>
+    <div id="box">
+
+        <div class="item">
+            <p><strong>مقر رئيسي</strong></p>
+            <img src="./img/Main_Pin_shadow.png" alt="مقر رئيسي" class="img1">
+            
+        </div>
+        <div class="item">
+            <p><strong>مقر فــرعي</strong></p>
+            <img src="./img/braches_Pin_shadow.png" alt="مقر فرعي" class="img1">
+            
+        </div>
+    
+       
+    </div>
+    
+    <script src="https://unpkg.com/leaflet-geoman@2.14.0/dist/leaflet-geoman.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-control-layers/leaflet-control-layers.js"></script>
+    <script src="https://unpkg.com/togeojson@2.0.0/togeojson.js"></script>
+    <script src="https://unpkg.com/leaflet-draw/dist/leaflet.draw.js"></script>
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+    <script src="https://unpkg.com/leaflet-omnivore@0.3.0/leaflet-omnivore.min.js"></script>
+    <script src="https://unpkg.com/leaflet-control-measure/dist/leaflet-control-measure.js"></script>
+    <script src="./js/ner.js"></script>
+    <script src="./js/first.js"></script>
+    <script src="./js/sec.js"></script>
+    <script src="./js/gooov.js"></script>
+    <script src="./js/nosgov.js"></script>
+    <script src="./js/nnnogov.js"></script>
+    <script src="./js/app.js"></script>
+    <script src="./js/p1.js"></script>
+    <script src="./js/p2.js"></script>
+
+</body>
+</html>
